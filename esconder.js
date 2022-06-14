@@ -42,14 +42,17 @@ Jorge.dibujarse();
 
 
 canvas.addEventListener("click",function(e){
-    let xm = e.offsetX;
-    let ym = e.offsetY;
-    if((xm-Jorge.x)**2+(ym-Jorge.y)**2<=Jorge.r**2){
+    let XM=e.offsetX
+    let YM=e.offsetY
+    console.log(XM,YM)
+    if ((XM-Jorge.x)**2+(YM-Jorge.y)**2<=(Jorge.r)**2) {
         ctx.fillStyle="white"
-        ctx.beginPath();
-        ctx.rect(200,100,100,100)
+        ctx.beginPath()
+        ctx.rect(Jorge.x-Jorge.r,Jorge.y-Jorge.r,2.1*Jorge.r,2.1*Jorge.r)
         ctx.fill()
+        ctx.fillStyle="black"
+    }
         
 
     }
-})
+)
