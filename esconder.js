@@ -46,7 +46,7 @@ canvas.addEventListener("click",function(e){
     let ym = e.offsetY;
     if((xm-Jorge.x)**2+(ym-Jorge.y)**2<=Jorge.r**2){
         ctx.fillStyle="white"
-        ctx.beginPath()
+        ctx.beginPath();
         ctx.rect(200,100,100,100)
         ctx.fill()
         
